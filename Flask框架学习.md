@@ -25,4 +25,54 @@
         return redirect('http://www.baidu.com')
     ```
 6. Flask 特殊响应类型：`错误`。abort()函数来生成,状态码404。
-7. 
+7. 模板渲染方法：render_template()
+    ```python
+    # 模板默认放在template文件夹
+    <h1>hello,{{name}}</h1> #模板中的变量 name ,文件名 user.html
+
+    from flask import Flask,render_template
+    @app.route('/user/<name>')
+    def user(name):
+        # 第一个参数为渲染哪个模板，第二个参数为模板中的变量设定
+        return render_template('user.html',name=name) # 给模板中的name参数赋予本作用域中的name变量的值
+
+    模板中可以使用的变量包括列表、字典和对象
+    {{my_dict['key']}} # 字典
+    {{my_list[2]}} # 列表
+    {{my_object.somemethod()}} # 对象的某个方法的返回值
+    ```
+8. 在渲染模板时，变量的值可以使用过滤器来修改。比如 `hello,{{name| captitalize}}`则name的值变成首字母大写。
+9. 模板的渲染语法
+    ```html
+    # 结构控制
+    {% if user %}
+        hello,{{user}}
+    {% else %}
+        hello,Stranger
+    {% endif %}
+
+    # for循环
+    <ul>
+        {% for comment in comments%}
+            <li>{{coment}}</li>
+        {% endfor %}
+    </ul>
+
+    # 宏，类似于python中的函数
+    {% macro render_comment(comment)%}
+        <li>{{comment}}</li>
+    {% endmacro %}
+
+    <ul>
+        {% for comment in comments %}
+            {{render_comment(comment)}}
+        {% endfor %}
+    </ul>
+
+    # 宏，可以从文件中导入
+    {% import 'macro.html' as macros %}
+
+    # 需要在多处重复使用的模板代码片段可以写入单独的文件，再引入所有模板中，以避免重复
+    {%include 'common.html'%}
+
+    ```

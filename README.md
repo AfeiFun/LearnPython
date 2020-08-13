@@ -1,5 +1,5 @@
 # LearnPython
-学习python笔记，计划路径如下
+学习python笔记，计划路径如下：
 
 1. python语言基础
     1. 基础语法

@@ -1,4 +1,4 @@
-# git 常用命令
+# Git 常用命令
 1. 远程仓库相关命令
     ```bash
     检出仓库：$ git clone git://github.com/jquery/jquery.git

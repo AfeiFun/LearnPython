@@ -1,5 +1,4 @@
 # LearnPython
-仅供自己学习python用。
+供自己学习python用，做做笔记，试试git如何使用。
 
-1. clone远程仓库，修改后并添加。git clone xxxx。
-2. 将本地的master分支push到远程test分支。
+1. 8-13 学习了Git用法，包括本地仓库和远程仓库。

@@ -43,7 +43,7 @@
     ```
 8. 在渲染模板时，变量的值可以使用过滤器来修改。比如 `hello,{{name| captitalize}}`则name的值变成首字母大写。
 9. 模板的渲染语法
-    ```html
+    ```python
     # 结构控制
     {% if user %}
         hello,{{user}}

@@ -1,5 +1,10 @@
 # Git 常用命令
-1. 远程仓库相关命令
+1. 设置git
+    ```bash
+    设置git名字 git config --global user.name "BigFly"
+    设置git邮箱 git config --global user.email "afforfun@outlook.com"
+    ```
+2. 远程仓库相关命令
     ```bash
     检出仓库：$ git clone git://github.com/jquery/jquery.git
     查看远程仓库：$ git remote -v
@@ -9,7 +14,7 @@
     拉取远程仓库：$ git pull [remoteName] [localBranchName]
     推送远程仓库：$ git push [remoteName] [localBranchName]
     ```
-2. branch操作相关命令
+3. branch操作相关命令
     ```bash
     git branch #查看本地分支
     查看远程分支：$ git branch -r
@@ -29,7 +34,7 @@
     如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。
     $ git push origin :test              // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心
     ```
-3. tag操作相关命令
+4. tag操作相关命令
     ```bash
     查看版本：$ git tag
     创建版本：$ git tag [name]

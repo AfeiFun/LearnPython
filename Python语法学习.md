@@ -1,4 +1,3 @@
-[toc]
 
 ## Python的内建方法
 ```python
